@@ -1,10 +1,7 @@
-# =============================================
-# WordPress .gitignore
-# =============================================
-# --- ГОЛОВНЕ: конфіг з паролями до БД ---
 wp-config.php
-# --- Середовищні файли ---
+wp-content/uploads/
+wp-content/cache/
 .env
-.env.local
-.env.production
-*.env
+node_modules/
+.DS_Store
+*.log
