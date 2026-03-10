@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /cgi-bin
+Disallow: /?
+Disallow: /wp/
+Disallow: *?s=
+Disallow: *&s=
+Disallow: /search/
+Disallow: /author/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */feed
+Disallow: */rss
+Disallow: */embed
+Disallow: */wlwmanifest.xml
+Host: ascania.ua
+Sitemap: https://ascania.ua/sitemap_index.xml
