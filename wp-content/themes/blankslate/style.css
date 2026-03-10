@@ -17,3 +17,26 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .skip-link{left:-9999rem;top:2.5rem;z-index:999999999;text-decoration:underline}
 .skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
 .visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
+/* Typography для Elementor Text Editor */
+.elementor-widget-text-editor h1,
+.elementor-widget-text-editor h2,
+.elementor-widget-text-editor h3,
+.elementor-widget-text-editor h4,
+.elementor-widget-text-editor h5,
+.elementor-widget-text-editor h6 {
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+.elementor-widget-text-editor h1 { font-size: 2em; }
+.elementor-widget-text-editor h2 { font-size: 1.6em; }
+.elementor-widget-text-editor h3 { font-size: 1.3em; }
+.elementor-widget-text-editor strong, 
+.elementor-widget-text-editor b { font-weight: bold; }
+.elementor-widget-text-editor em, 
+.elementor-widget-text-editor i { font-style: italic; }
+.elementor-widget-text-editor p { margin-bottom: 15px; line-height: 1.6; }
+.elementor-widget-text-editor ul,
+.elementor-widget-text-editor ol { margin: 0 0 15px 25px; }
+.elementor-widget-text-editor ul { list-style: disc; }
+.elementor-widget-text-editor ol { list-style: decimal; }
