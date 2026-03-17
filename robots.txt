@@ -1,16 +1,52 @@
-User-Agent: *
-Disallow: /cgi-bin
-Disallow: /?
+User-agent: *
+Allow: /
+
+# Закриваємо службові директорії WordPress
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
 Disallow: /wp/
+Disallow: /cgi-bin/
+
+# Закриваємо технічні сторінки
+Disallow: /?
 Disallow: *?s=
 Disallow: *&s=
 Disallow: /search/
 Disallow: /author/
 Disallow: /users/
-Disallow: */trackback
+Disallow: /feed/
 Disallow: */feed
 Disallow: */rss
+Disallow: */trackback
 Disallow: */embed
 Disallow: */wlwmanifest.xml
+Disallow: /page/
+Disallow: /tag/
+Disallow: /?p=
+Disallow: /wp-json/
+
+# Блокуємо поганих ботів
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 Host: ascania.ua
 Sitemap: https://ascania.ua/sitemap_index.xml
