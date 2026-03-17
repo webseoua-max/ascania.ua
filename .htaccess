@@ -63,6 +63,47 @@ ExpiresByType font/woff2 A31557600
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END NON_LSCACHE
 
+# ============================================================
+# SECURITY RULES
+# ============================================================
+
+# Блокування IP сканерів через RewriteCond
+<IfModule mod_rewrite.c>
+  RewriteCond %{REMOTE_ADDR} ^185\.177\.72\.(38|60|49)$
+  RewriteRule ^ - [F,L]
+</IfModule>
+
+# Брутфорс wp-login
+<Files wp-login.php>
+  Order allow,deny
+  Allow from all
+  Deny from 185.201.136.20
+</Files>
+
+# Вимкнення xmlrpc.php
+<Files xmlrpc.php>
+  Order allow,deny
+  Deny from all
+</Files>
+
+# Блокування autodiscover
+<IfModule mod_rewrite.c>
+  RewriteRule ^autodiscover/.*$ - [R=404,L]
+</IfModule>
+
+# Захист конфігів
+<FilesMatch "(^\.env|\.env\.|wp-config\.txt|^\.htpasswd)">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# 410 для відсутнього зображення
+<IfModule mod_rewrite.c>
+  RewriteRule ^img/ag_logo_mail\.png$ - [G,L]
+</IfModule>
+
+# ============================================================
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
